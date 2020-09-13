@@ -13,11 +13,35 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('btemplate', function () {
     return view('backendtemplate');
 });
+Route::get('ftemplate',function (){
+         return view('frontendtemplate');
+});
+Route::get('buy',function (){
+         return view('frontend.buy');
+});
+Route::get('/','PageController@home')->name('homepage');
+
+Route::get('shoppingcart','PageController@shoppingcart')->name('cartpage');
+Route::get('sell','PageController@sellfun')->name('sellpage');
+Route::get('buy','PageController@buyfun')->name('buypage');
+
+Route::get('contact','PageController@contactfun')->name('contactpage');
+
+
+// Backend Controller
+Route::resource('orders','OrderController');
+Route::resource('crops','CropController');
+
+Route::resource('pricelists','PricelistController');
+
+Route::resource('agrpesticides','AgrpesticideController');
+
+Route::resource('storethings','StorethingController');
+
+
 
