@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
 use App\Order;
 use Illuminate\Http\Request;
 
@@ -44,7 +44,24 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cartArr=json_decode($request->shop_data);
+       
+       $total=0;
+       foreach ($cartArr as $row) {
+           $total+=($row->price * $row->qty);
+       }
+       $order=new Order;
+       $order->voucherno=uniqid();
+       $order->orderdate=date('Y-m-d');
+       $order->user_id=6;
+       
+       $order->total=$total;
+       $order->save();
+
+       foreach ($cartArr as $row) {
+           $order->storethings()->attach($row->id,['qty'=>$row->qty]);
+       }
+       return 'Successful!';
     }
 
     /**
@@ -55,7 +72,7 @@ class OrderController extends Controller
      */
     public function show(Order $order)
     {
-        //
+        return view('backend.orders.order_detail',compact('order'));
     }
 
     /**

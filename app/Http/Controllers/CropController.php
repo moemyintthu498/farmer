@@ -107,12 +107,13 @@ class CropController extends Controller
     {
          $request->validate([
         "name" => 'required',
-        "photo" => 'required',
+        "photo" => 'sometimes',
         "description" => 'required',
         "soil" => 'required',
         "season" => 'required',
         "rainfall" => 'required',
         "insect" => 'required',
+        "oldphoto"=>'required',
         
     ]);
 

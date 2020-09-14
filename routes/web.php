@@ -27,10 +27,13 @@ Route::get('buy',function (){
 Route::get('/','PageController@home')->name('homepage');
 
 Route::get('shoppingcart','PageController@shoppingcart')->name('cartpage');
-Route::get('sell','PageController@sellfun')->name('sellpage');
+Route::get('crop/{id}','PageController@cropfun')->name('croppage');
 Route::get('buy','PageController@buyfun')->name('buypage');
 
 Route::get('contact','PageController@contactfun')->name('contactpage');
+Route::get('registerform','PageController@registerfun')->name('registerpage');
+
+Route::get('loginform','PageController@loginfun')->name('loginpage');
 
 
 // Backend Controller
@@ -45,3 +48,7 @@ Route::resource('storethings','StorethingController');
 
 
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

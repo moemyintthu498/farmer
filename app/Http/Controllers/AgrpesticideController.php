@@ -109,11 +109,12 @@ class AgrpesticideController extends Controller
     {
          $request->validate([
         "name" => 'required',
-        "photo" => 'required',
+        "photo" => 'sometimes',
         "price" => 'required',
         "disease" => 'required',
         "expiredate" => 'required',
         "crop" => 'required',
+        "oldphoto"=>'required',
         
         
     ]);

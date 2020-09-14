@@ -3,6 +3,8 @@
   <head>
     <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
+
+    <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
@@ -22,6 +24,7 @@
 
     <link rel="stylesheet" href="{{asset('nn/css/bootstrap-datepicker.css')}}">
     <link rel="stylesheet" href="{{asset('nn/css/jquery.timepicker.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('nn/icon/icofont/icofont.min.css')}}">
 
     
     <link rel="stylesheet" href="{{asset('nn/css/flaticon.css')}}">
@@ -43,7 +46,7 @@
 						    <span class="text">mic@email.com</span>
 					    </div>
 					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
-						    <span class="text">3-5 Business days delivery</span>
+						    <span class="text"><a href="{{route('loginpage')}}" class="text-white">Login </a>| <a href="{{route('registerpage')}}" class="text-white">Register</a></span>
 					    </div>
 				    </div>
 			    </div>
@@ -61,19 +64,17 @@
 	        <ul class="navbar-nav ml-auto">
 	          <li class="nav-item active"><a href="{{route('homepage')}}" class="nav-link">Home</a></li>
 	          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Shop</a>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">သီးနှံ</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
-              	<a class="dropdown-item" href="shop.html">Shop</a>
-              	<a class="dropdown-item" href="wishlist.html">Wishlist</a>
-                <a class="dropdown-item" href="product-single.html">Single Product</a>
-                <a class="dropdown-item" href="cart.html">Cart</a>
-                <a class="dropdown-item" href="checkout.html">Checkout</a>
+                @foreach($crops as $crop) 
+                <a class="dropdown-item" href="{{route('croppage',$crop->id)}}">{{$crop->name}}</a>
+                @endforeach 
               </div>
             </li>
-	          <li class="nav-item"><a href="{{route('sellpage')}}" class="nav-link">Selling</a></li>
+	          {{-- <li class="nav-item"><a href="{{route('sellpage')}}" class="nav-link">Selling</a></li> --}}
 	          <li class="nav-item"><a href="{{route('buypage')}}" class="nav-link">Buying</a></li>
 	          <li class="nav-item"><a href="{{route('contactpage')}}" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta cta-colored"><a href="{{route('cartpage')}}" class="nav-link"><span class="icon-shopping_cart"></span>[0]</a></li>
+	          <li class="nav-item cta cta-colored"><a href="{{route('cartpage')}}" class="nav-link" ><span class="icon-shopping_cart"></span>[<span id="cartNoti" ></span>]</a></li>
 
 	        </ul>
 	      </div>
@@ -83,7 +84,7 @@
 
     <section id="home-section" class="hero">
 		  <div class="home-slider owl-carousel">
-	      <div class="slider-item" style="background-image: url({{asset('nn/images/bg_1.jpg')}});">
+	      <div class="slider-item" style="background-image: url({{asset('nn/images/bg3.jpg')}});">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -98,14 +99,14 @@
 	        </div>
 	      </div>
 
-	      <div class="slider-item" style="background-image: url({{asset('nn/images/bg_2.jpg')}});">
+	      <div class="slider-item" style="background-image: url({{asset('nn/images/potato1.jpg')}});">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 	            <div class="col-sm-12 ftco-animate text-center">
 	              <h1 class="mb-2">100% Fresh &amp; Organic Foods</h1>
-	              <h2 class="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>
+	              <h2 class="subheading mb-4">We deliver organic crops &amp; </h2>
 	              <p><a href="#" class="btn btn-primary">View Details</a></p>
 	            </div>
 

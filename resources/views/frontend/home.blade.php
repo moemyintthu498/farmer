@@ -1,98 +1,90 @@
 @extends('frontendtemplate')
 @section('front')
 
-<div class="container-fluid my-5">awsedrgzxdgbhnjzexrgybhuj</div>
+<div class="container-fluid my-5 text-center"><h2><b>ယနေ့ သီးနှံ ကာလပေါက်စျေးများ</b></h2>
+<h4>(သီးနှံစျေးကွက်မှာ အချိန်နဲ့အမျှ ပြောင်းလဲပါမည်)</h4></div>
 		<section class="ftco-section ftco-category ftco-no-pt my-5">
-			<div class="container">
+			<div class="container ">
 				<div class="row">
-					<div class="col-md-8">
-						<div class="row">
-							{{-- <div class="col-md-6 order-md-last align-items-stretch d-flex">
-								<div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url({{asset('nn/images/category.jpg')}});">
-									<div class="text text-center">
-										<h2>Vegetables</h2>
-										<p>Protect the health of every home</p>
-										<p><a href="#" class="btn btn-primary">Shop now</a></p>
-									</div>
-								</div>
-							</div> --}}
-                            <div class="col-md-6">
-                                <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({{asset('nn/images/category-1.jpg')}});">
-                                    <div class="text px-3 py-1">
-                                        <h2 class="mb-0"><a href="#">Fruits</a></h2>
-                                    </div>
-                                </div>
-                                <div class="">
-                                <div>Buy Shop</div>
-                                <div>1 teen- 150000KS</div>
-                                <a href="{{route('sellpage')}}" class="btn btn-success">Sell</a>
-                                </div>
-                                <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({{asset('nn/images/category-2.jpg')}});">
-                                    <div class="text px-3 py-1">
-                                        <h2 class="mb-0"><a href="#">Vegetables</a></h2>
-                                    </div>
-                                </div>
-                            </div>
-							<div class="col-md-6">
-								<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({{asset('nn/images/category-1.jpg')}});">
-									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Fruits</a></h2>
-									</div>
-								</div>
-								<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({{asset('nn/images/category-2.jpg')}});">
-									<div class="text px-3 py-1">
-										<h2 class="mb-0"><a href="#">Vegetables</a></h2>
-									</div>
-								</div>
-							</div>
-						</div>
+					<div class="col-md-6">
+              <h3><b>ဝယ်စျေး</b></h3>
+              <b>----------</b>
+              <table>
+                   <thead class="h5">
+                     <th>သီးနှံအမည် </th>
+                     <th>&nbsp;&nbsp;</th>
+                     <th>ပိဿာ/တင်း </th>
+                     <th>&nbsp;&nbsp;</th>
+                     <th>စျေးနှုန်း </th>
+                   </thead>
+                   <tbody class="h5">
+                    @foreach($pricelists as $pricelist)
+                     <tr>
+                       <td>{{$pricelist->crop->name}}</td>
+                       <td></td>
+                       <td>၁</td>
+                       <td></td>
+                       <td>{{$pricelist->buyprice}}Ks</td>
+                     </tr>
+                     @endforeach
+                   </tbody>
+              </table>
+              
 					</div>
+          <div class="col-md-6">
+              <h3><b>ရောင်းစျေး</b></h3>
+              <b>----------</b>
+              <table>
+                   <thead class="h5">
+                     <th>သီးနှံအမည် </th>
+                     <th>&nbsp;&nbsp;</th>
+                     <th>ပိဿာ/တင်း </th>
+                     <th>&nbsp;&nbsp;</th>
+                     <th>စျေးနှုန်း </th>
+                   </thead>
+                   <tbody class="h5">
+                     @foreach($pricelists as $pricelist)
+                     <tr>
+                       <td>{{$pricelist->crop->name}}</td>
+                       <td></td>
+                       <td>၁</td>
+                       <td></td>
+                       <td>{{$pricelist->sellprice}}Ks</td>
+                     </tr>
+                     @endforeach
+                   </tbody>
+              </table>
+              
+          </div>
 
-					<div class="col-md-4">
-						<div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url({{asset('nn/images/category-3.jpg')}});">
-							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Juices</a></h2>
-							</div>		
-						</div>
-						<div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url({{asset('nn/images/category-4.jpg')}});">
-							<div class="text px-3 py-1">
-								<h2 class="mb-0"><a href="#">Dried</a></h2>
-							</div>
-						</div>
-					</div>
+					
 				</div>
 			</div>
 		</section>
+    <section class="my-5">
+      <div class="text-center h3"><b>တောင်သူဦးကြီးများရှင့် ယနေ့ အောက်ပါသီးနှံများကို <a href="{{route('contactpage')}}">ပွဲရုံ</a> မှာလာရောက် ရောင်းချနိုင်ပါပီရှင့်</b></div>
+      <div class="container-fluid">
+       <div class="col-md-4">
+         <div class="row justify-content-center">
+           <img src="{{asset('nn/images/product-2.jpg')}}" width="80%" height="80%">
+           <h5>Stawberry</h5>
+         </div>
+       </div>
+     </div>
+
+    </section>
 
     
 		
-		<section class="ftco-section img" style="background-image: url({{asset('nn/images/bg_3.jpg')}});">
-    	<div class="container">
-				<div class="row justify-content-end">
-          <div class="col-md-6 heading-section ftco-animate deal-of-the-day ftco-animate">
-          	<span class="subheading">Best Price For You</span>
-            <h2 class="mb-4">Deal of the day</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-            <h3><a href="#">Spinach</a></h3>
-            <span class="price">$10 <a href="#">now $5 only</a></span>
-            <div id="timer" class="d-flex mt-5">
-						  <div class="time" id="days"></div>
-						  <div class="time pl-3" id="hours"></div>
-						  <div class="time pl-3" id="minutes"></div>
-						  <div class="time pl-3" id="seconds"></div>
-						</div>
-          </div>
-        </div>   		
-    	</div>
-    </section>
+		
 
     <section class="ftco-section testimony-section">
       <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
           <div class="col-md-7 heading-section ftco-animate text-center">
-          	<span class="subheading">Testimony</span>
-            <h2 class="mb-4">Our satisfied customer says</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+          	
+            <h4 class="mb-4"><b>တောင်သူဦးကြီးများ၏ နှစ်သက်သဘောကျမှု များ</b></h4>
+            
           </div>
         </div>
         <div class="row ftco-animate">
@@ -100,71 +92,73 @@
             <div class="carousel-testimony owl-carousel">
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/person_1.jpg')}})">
+                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/farmer2.jpg')}})">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Marketing Manager</span>
+                    <p class="mb-5 pl-4 line">ဒီပွဲရုံမှာ သီးနှံရောင်းချရတာ အရမ်းအဆင်ပြေပါတယ်။သီးနှံတွေ စျေးကောင်းရဖို့ဆိုတာ ကျွန်တော် တို့ အိမ်မက်ပါ</p>
+                    <p class="name">ဦးလှ</p>
+                    <span class="position">တောင်သူတစ်ဦး</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/person_2.jpg')}})">
+                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/farmer.jpeg')}})">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Interface Designer</span>
+                    <p class="mb-5 pl-4 line">ကျွန်တော် သီးနှံတစ်ခုကို စစိုက်ဖို့ စိတ်မရဲခဲ့ဘူး။ဒီမှာဝင်ကြည့်တော့ ဘယ်လိုသီးနှံဆို ဘယ်လိုစိုက်ပျိုးရမယ် ရောဂါပိုးကျရင် ဘာဆေးပတ်ရမယ်ဆိုတာ လမ်းညွှန်ထားတော့ တော်တော်အဆင်ပြေသွားတယ်။</p>
+                    <p class="name">မောင်သာချို
+</p>
+                    <span class="position">တောင်သူတစ်ဦး</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/person_3.jpg')}})">
+                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/farmer3.jpg')}})">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">UI Designer</span>
+                    <p class="mb-5 pl-4 line">ဒီပွဲရုံမှာ သီးနှံရောင်းချရတာ အရမ်းအဆင်ပြေပါတယ်။သီးနှံတွေ စျေးကောင်းရဖို့ဆိုတာ ကျွန်တော် တို့ အိမ်မက်ပါ</p>
+                    <p class="name">ဦးဘ</p>
+                    <span class="position">တောင်သူတစ်ဦး</span>
                   </div>
                 </div>
               </div>
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/person_1.jpg')}})">
+                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/farmer4.jpg')}})">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">Web Developer</span>
+                    <p class="mb-5 pl-4 line">ဒီပွဲရုံမှာ သီးနှံရောင်းချရတာ အရမ်းအဆင်ပြေပါတယ်။သီးနှံတွေ စျေးကောင်းရဖို့ဆိုတာ ကျွန်တော် တို့ အိမ်မက်ပါ</p>
+                    <p class="name">ဦးမြ</p>
+                    <span class="position">တောင်သူတစ်ဦး</span>
                   </div>
                 </div>
               </div>
+              
               <div class="item">
                 <div class="testimony-wrap p-4 pb-5">
-                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/person_1.jpg')}})">
+                  <div class="user-img mb-5" style="background-image: url({{asset('nn/images/farmer1.jpeg')}})">
                     <span class="quote d-flex align-items-center justify-content-center">
                       <i class="icon-quote-left"></i>
                     </span>
                   </div>
                   <div class="text text-center">
-                    <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                    <p class="name">Garreth Smith</p>
-                    <span class="position">System Analyst</span>
+                    <p class="mb-5 pl-4 line">ဒီပွဲရုံမှာ သီးနှံရောင်းချရတာ အရမ်းအဆင်ပြေပါတယ်။ကျွန်မတို့ ပွဲစားတွေ ရောင်းရင်း စျေးနှိမ်းကျတယ်။ဒီမှာတော့ စျေးမနှိမ်ပဲနဲ့ ကာလပေါက်စျေးနဲ့ ဝယ်ပေးတယ်။</p>
+                    <p class="name">ဒေါ်မြ</p>
+                    <span class="position">တောင်သူတစ်ဦး</span>
                   </div>
                 </div>
               </div>
