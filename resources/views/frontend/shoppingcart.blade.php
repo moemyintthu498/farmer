@@ -11,10 +11,10 @@
 						      <tr class="text-center">
 						        <th>&nbsp;</th>
 						        <th>&nbsp;</th>
-						        <th>Product name</th>
-						        <th>Price</th>
-						        <th>Quantity</th>
-						        <th>Total</th>
+						        <th>သီးနှံအမည်</th>
+						        <th>စျေးနှုန်း</th>
+						        <th>ပမာဏ</th>
+						        <th>စုစုပေါင်း</th>
 						      </tr>
 						    </thead>
 						    <tbody id="tbody">
@@ -29,7 +29,7 @@
     			
     			<div class="col-lg-4 mt-5 cart-wrap ftco-animate">
     				<div class="cart-total mb-3">
-    					<h3>Cart Totals</h3>
+    					<h3>ကုန်ကျစရိတ်</h3>
     					<p class="d-flex">
     						<span id="cname"></span>
     						<span id="subtotal"></span>
@@ -38,7 +38,8 @@
     					
     					<hr>
     					<p class="d-flex total-price">
-    						<span>Total</span>
+    						<span>စုစုပေါင်း
+</span>
     						<span id="total1"></span>
     					</p>
     				</div>
@@ -46,13 +47,13 @@
 
                      @role("Customer")
                                 <button class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn buy_now"> 
-                                    Check Out 
+                                    မှာလို့ရပါပီ
                                 </button>
                                 @else
-                                <a href="{{route('loginpage')}}" class="btn btn-secondary btn-block mainfullbtncolor "> 
-                                    Login To Check Out 
+                                <a href="{{route('loginpage')}}" class="btn btn-primary btn-block mainfullbtncolor "> 
+                                    Register(ဝယ်ယူရန်) 
                                 </a>
-                 @endrole
+                    @endrole
 
                   {{-- <button class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn buy_now"> 
                                     Check Out 

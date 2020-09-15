@@ -2,7 +2,7 @@
 
 @section('content')
 
-	 <div class="container-fluid">
+<div class="container-fluid">
     <!-- Page Heading -->
     <div class="d-sm-flex align-items-center justify-content-between mb-4">
     	<div class="row">
@@ -70,7 +70,7 @@
 			        </div>
 			        </div>
 
-			      </div>
+			      {{-- </div> --}}
 			      
 			      
 			      <div class="form-group row">

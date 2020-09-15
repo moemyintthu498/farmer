@@ -67,7 +67,7 @@ class OrderController extends Controller
        foreach ($cartArr as $row) {
            $order->storethings()->attach($row->id,['qty'=>$row->qty]);
        }
-       return 'Successful!';
+       return 'ဝယ်ယူမှု အောင်မြင်ပါသည်။';
     }
 
     /**

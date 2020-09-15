@@ -3,7 +3,7 @@
 
 <div class="container-fluid my-5 text-center"><h2><b>ယနေ့ သီးနှံ ကာလပေါက်စျေးများ</b></h2>
 <h4>(သီးနှံစျေးကွက်မှာ အချိန်နဲ့အမျှ ပြောင်းလဲပါမည်)</h4></div>
-		<section class="ftco-section ftco-category ftco-no-pt my-5">
+		<section class="ftco-section ftco-category ftco-no-pt my-5 ">
 			<div class="container ">
 				<div class="row">
 					<div class="col-md-6">
@@ -24,7 +24,7 @@
                        <td></td>
                        <td>၁</td>
                        <td></td>
-                       <td>{{$pricelist->buyprice}}Ks</td>
+                       <td>{{$pricelist->buyprice}}ကျပ်</td>
                      </tr>
                      @endforeach
                    </tbody>
@@ -49,7 +49,7 @@
                        <td></td>
                        <td>၁</td>
                        <td></td>
-                       <td>{{$pricelist->sellprice}}Ks</td>
+                       <td>{{$pricelist->sellprice}}ကျပ်</td>
                      </tr>
                      @endforeach
                    </tbody>
@@ -62,16 +62,26 @@
 			</div>
 		</section>
     <section class="my-5">
-      <div class="text-center h3"><b>တောင်သူဦးကြီးများရှင့် ယနေ့ အောက်ပါသီးနှံများကို <a href="{{route('contactpage')}}">ပွဲရုံ</a> မှာလာရောက် ရောင်းချနိုင်ပါပီရှင့်</b></div>
-      <div class="container-fluid">
-       <div class="col-md-4">
-         <div class="row justify-content-center">
-           <img src="{{asset('nn/images/product-2.jpg')}}" width="80%" height="80%">
-           <h5>Stawberry</h5>
-         </div>
-       </div>
-     </div>
+      <div class="text-center h3 "><b>တောင်သူဦးကြီးများရှင့် ယနေ့ အောက်ပါသီးနှံများကို <a href="{{route('contactpage')}}">ပွဲရုံ</a> မှာလာရောက် ရောင်းချနိုင်ပါပီရှင့်</b></div>
 
+      <div class="container my-5">
+        <div class="row my-5">
+          @foreach($pricelists as $pricelist)
+          <div class="col-md-6 col-lg-3 ftco-animate">
+            <div class="product">
+              <a href="#" class="img-prod"><img class="img-fluid" src="{{ asset($pricelist->crop->photo)}}" alt="Colorlib Template">
+            <div class="overlay"></div>
+              </a>
+              <div class="text py-3 pb-4 px-3 text-center">
+                <h3><a href="#">{{$pricelist->crop->name}}</a></h3>
+              </div>
+            </div>
+          </div>
+          @endforeach
+          
+        </div>
+      </div>
+    
     </section>
 
     

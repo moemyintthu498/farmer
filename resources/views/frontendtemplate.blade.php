@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Vegefoods - Free Bootstrap 4 Template by Colorlib</title>
+    <title>တောင်သူဦးကြီး</title>
     <meta charset="utf-8">
 
     <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -39,11 +39,11 @@
 		    		<div class="row d-flex">
 		    			<div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-phone2"></span></div>
-						    <span class="text">09-123456789/09-1234567</span>
+						    <span class="text">၀၉-၂၅၇၅၈၇၂၁၃ / ၀၉-၇၉၄၅၆၆၇၈၉</span>
 					    </div>
 					    <div class="col-md pr-4 d-flex topper align-items-center">
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
-						    <span class="text">mic@email.com</span>
+						    <span class="text">Farmer@email.com</span>
 					    </div>
             <div class="col-lg-4 col-10">
                @role('Customer')
@@ -81,16 +81,16 @@
     </div>
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Farmer</a>
+	      <a class="navbar-brand" href="index.html"><img src="{{asset('nn/images/logo1.jpeg')}}" width="50" height="50">&nbsp;တောင်သူဦးကြီး</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	        <span class="oi oi-menu"></span> စာမျက်နှာ
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="{{route('homepage')}}" class="nav-link">Home</a></li>
+	          <li class="nav-item active"><a href="{{route('homepage')}}" class="nav-link">ပင်မစာမျက်နှာ</a></li>
 	          <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">သီးနှံ</a>
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">သီးနှံလေ့လာရန်</a>
               <div class="dropdown-menu" aria-labelledby="dropdown04">
                 @foreach($crops as $crop) 
                 <a class="dropdown-item" href="{{route('croppage',$crop->id)}}">{{$crop->name}}</a>
@@ -98,8 +98,8 @@
               </div>
             </li>
 	          {{-- <li class="nav-item"><a href="{{route('sellpage')}}" class="nav-link">Selling</a></li> --}}
-	          <li class="nav-item"><a href="{{route('buypage')}}" class="nav-link">Buying</a></li>
-	          <li class="nav-item"><a href="{{route('contactpage')}}" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="{{route('buypage')}}" class="nav-link">ဝယ်ယူရန်</a></li>
+	          <li class="nav-item"><a href="{{route('contactpage')}}" class="nav-link">ဆက်သွယ်ရန်</a></li>
 	          <li class="nav-item cta cta-colored"><a href="{{route('cartpage')}}" class="nav-link" ><span class="icon-shopping_cart"></span>[<span id="cartNoti" ></span>]</a></li>
 
 	        </ul>
@@ -116,9 +116,9 @@
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 	            <div class="col-md-12 ftco-animate text-center">
-	              <h1 class="mb-2">We serve Fresh Vegestables &amp; Fruits</h1>
-	              <h2 class="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>
-	              <p><a href="#" class="btn btn-primary">View Details</a></p>
+	              <h1 class="mb-2">လယ်သမားအကျိုးဆောင် ဒို့ဘုန်းရောင်</h1>
+	              
+	              <p><a href="#" class="btn btn-primary">ပိုမို ကြည့်ရှုရန်</a></p>
 	            </div>
 
 	          </div>
@@ -131,9 +131,9 @@
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
 
 	            <div class="col-sm-12 ftco-animate text-center">
-	              <h1 class="mb-2">100% Fresh &amp; Organic Foods</h1>
-	              <h2 class="subheading mb-4">We deliver organic crops &amp; </h2>
-	              <p><a href="#" class="btn btn-primary">View Details</a></p>
+	              <h1 class="mb-2">မြေမှန် မျိုးမှန် စိုက်နည်းမှန်  ရာသီမှန်အောင်စိုက်</h1>
+	              
+	              <p><a href="#" class="btn btn-primary">ပိုမို ကြည့်ရှုရန်</a></p>
 	            </div>
 
 	          </div>
@@ -155,51 +155,43 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Vegefoods</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia.</p>
+              <h2 class="ftco-heading-2">တောင်သူဦးကြီး</h2>
+              <p>တောင်သူဦးကြီးများရှင့် ကောက်ပဲသီးနှံများကို ကာလပေါက်စျေး နဲ့ ရောင်းချလို့ ရပါတယ်ရှင့်</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
-                <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                
+                <li class="ftco-animate"><a href="https://www.facebook.com/profile.php?id=100012211472535"><span class="icon-facebook"></span></a></li>
+                
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-5">
-              <h2 class="ftco-heading-2">Menu</h2>
+              <h2 class="ftco-heading-2">စာမျက်နှာ</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Shop</a></li>
-                <li><a href="#" class="py-2 d-block">About</a></li>
-                <li><a href="#" class="py-2 d-block">Journal</a></li>
-                <li><a href="#" class="py-2 d-block">Contact Us</a></li>
+                <li><a href="#" class="py-2 d-block">ပင်မစာမျက်နှာ</a></li>
+                <li><a href="#" class="py-2 d-block">လေ့လာရန်</a></li>
+                <li><a href="#" class="py-2 d-block">ဝယ်ယူရန်</a></li>
+                <li><a href="#" class="py-2 d-block">ဆက်သွယ်ရန်</a></li>
+                <li><a href="#" class="py-2 d-block">စျေးခြင်းတောင်း</a></li>
               </ul>
-            </div>
-          </div>
-          <div class="col-md-4">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Help</h2>
-              <div class="d-flex">
-	              <ul class="list-unstyled mr-l-5 pr-l-3 mr-4">
-	                <li><a href="#" class="py-2 d-block">Shipping Information</a></li>
-	                <li><a href="#" class="py-2 d-block">Returns &amp; Exchange</a></li>
-	                <li><a href="#" class="py-2 d-block">Terms &amp; Conditions</a></li>
-	                <li><a href="#" class="py-2 d-block">Privacy Policy</a></li>
-	              </ul>
-	              <ul class="list-unstyled">
-	                <li><a href="#" class="py-2 d-block">FAQs</a></li>
-	                <li><a href="#" class="py-2 d-block">Contact</a></li>
-	              </ul>
-	            </div>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Have a Questions?</h2>
+              <h2 class="ftco-heading-2">သီးနှံဝယ်ယူလိုသူ</h2>
+              <p>လူကြီးမင်းတို့စိတ်ကြိုက် အရည်အသွေးပြည့်ဝမှု အလေးချိန်ပြည့်ဝမှု နဲ့ယုံကြည်စွာ ဝယ်ယူလိုက်ပါ။</p>
+          </div>
+        </div>
+          
+          <div class="col-md">
+            <div class="ftco-footer-widget mb-4">
+            	<h2 class="ftco-heading-2 text-dark">မေးမြန်းရန်
+?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">မကွေးမြို့နယ်/မြို့ပတ်လမ်း/တောင်သူဦးကြီး/span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">၀၉-၂၅၇၅၈၇၂၁၃ / ၀၉-၇၉၄၅၆၆၇၈၉</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">farmer@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
@@ -209,7 +201,7 @@
           <div class="col-md-12 text-center">
 
             <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-						  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+						  Copyright &copy;<script>document.write(new Date().getFullYear());</script>  Future Of Farmer{{-- All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a> --}}
 						  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</p>
           </div>
