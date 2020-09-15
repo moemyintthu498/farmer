@@ -9,7 +9,7 @@
 	</div>
 	<h1 class="h3 mb-0 text-gray-800 ">orderDate:{{$order->orderdate}}</h1>
 
-</div>
+
 
 <div class="row">
       <div class="col-md-10">
@@ -31,9 +31,9 @@
             $i=1; $total=0;
            @endphp
            @foreach ($order->storethings as $storething)
-            {{$storething->crop->pricelists->sellprice}};
-           {{-- @php 
-              $mm=$storething->crop->pricelists->sellprice;
+           
+           @php 
+               $mm=$storething->buyprice+$storething->buyprice*0.1;
                $subtotal=$mm*$storething->pivot->qty;
                $total+=$subtotal;
             @endphp
@@ -43,7 +43,7 @@
 					  <td>{{$mm}}MMK</td>
             <td>{{$storething->pivot->qty}}</td>
              <td>{{$subtotal}}</td> 
-					</tr> --}}
+					</tr>
 					@endforeach
           <tr class="bg-dark text-white">
             <td colspan="4">Total:</td>
@@ -54,6 +54,7 @@
           
         </table>
       </div>
+    </div>
     </div>
 
 

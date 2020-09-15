@@ -53,7 +53,7 @@ class OrderController extends Controller
        $order=new Order;
        $order->voucherno=uniqid();
        $order->orderdate=date('Y-m-d');
-       $order->user_id=6;
+       $order->user_id=1;
        
        $order->total=$total;
        $order->save();

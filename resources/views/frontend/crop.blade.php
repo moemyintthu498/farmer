@@ -7,31 +7,31 @@
 	<table cellpadding="30px">
 		<tbody>
 			<tr>
-				<td><img src="{{asset('nn/images/onion1.jpg')}}" width="200" height="200"></td>
+				<td><img src="{{asset($cps->photo)}}" width="200" height="200"></td>
 				<td> 
                     <div>
 					<label><b>သီးနှံအမည် - </b></label>
-					<strong>ကြက်သွန်</strong>
+					<strong>{{$cps->name}}</strong>
 				    </div>
 				    <div>
 					<label><b>အကြောင်းအရာ - </b></label>
-					<strong>ကြက်သွန်</strong>
+					<strong>{{$cps->description}}</strong>
 				    </div>
 				    <div>
 					<label><b>စိုက်ပျိုးနိုင်သည့် မြေအမျိုးအစား - </b></label>
-					<strong>ကြက်သွန်</strong>
+					<strong>{{$cps->soil}}</strong>
 				    </div>
 				    <div>
 					<label><b>ရာသီဥတု - </b></label>
-					<strong>ကြက်သွန်</strong>
+					<strong>{{$cps->season}}</strong>
 				    </div>
 				    <div>
 					<label><b>မိုးရေချိန် - </b></label>
-					<strong>ကြက်သွန်</strong>
+					<strong>{{$cps->rainfall}}</strong>
 				    </div>
 				    <div>
 					<label><b>ဖြစ်ပွားနိုင်သည့်ရောဂါ - </b></label>
-					<strong><a href="#">ကြက်သွန်</a>ကြက်သွန်</strong>
+					<strong>{{$cps->insect}}</strong>
 				    </div>
 
 

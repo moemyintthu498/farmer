@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Storething;
 use App\Pricelist;
 use App\Crop;
+use App\Agrpesticide;
 
 class PageController extends Controller
 {
@@ -30,8 +31,9 @@ class PageController extends Controller
     //dd($crops);
      $cps=Crop::find($id);
     //dd($cps);
+     $agrpesticide=Agrpesticide::all();
 
-    return view('frontend.crop',compact('cps'));
+    return view('frontend.crop',compact('cps','agrpesticide'));
   }
 
 

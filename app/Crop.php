@@ -15,7 +15,7 @@ class Crop extends Model
     }
 
     public function agrpesticides($value=''){
-    	return $this->belongsTo('App\Agrpesticide');
+    	return $this->hasMany('App\Agrpesticide');
     }
 
     public function storethings($value=''){
