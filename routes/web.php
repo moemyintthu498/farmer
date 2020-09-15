@@ -37,7 +37,11 @@ Route::get('loginform','PageController@loginfun')->name('loginpage');
 
 
 // Backend Controller
+
 Route::resource('orders','OrderController');
+
+Route::middleware('role:Admin')->group(function(){
+   
 Route::resource('crops','CropController');
 
 Route::resource('pricelists','PricelistController');
@@ -45,6 +49,8 @@ Route::resource('pricelists','PricelistController');
 Route::resource('agrpesticides','AgrpesticideController');
 
 Route::resource('storethings','StorethingController');
+});
+
 
 
 

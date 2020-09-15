@@ -45,9 +45,35 @@
 					    	<div class="icon mr-2 d-flex justify-content-center align-items-center"><span class="icon-paper-plane"></span></div>
 						    <span class="text">mic@email.com</span>
 					    </div>
-					    <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+            <div class="col-lg-4 col-10">
+               @role('Customer')
+            <span class="float-right d-xl-block d-lg-block d-none">
+              <a id="navbarDropdown" class="nav-link dropdown-toggle loginlink text-white" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                {{Auth::user()->name}}
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item " href="{{route('logout')}}" onclick="event.preventDefault();
+                document.getElementById('logout-form').submit();">
+                {{ __('Logout') }}<div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
+                <span class="text"><a href="{{route('loginpage')}}" class="text-white">Login </a>| <a href="{{route('registerpage')}}" class="text-white">Register</a></span>
+              </div>
+              </a>
+              <form id="logout-form" action="{{route('logout')}}" method="POST" class="d-none">
+                @csrf
+              </form>
+            </div>
+          </span>
+          @else
+          <span class=" text float-right d-xl-block d-lg-block d-none">
+           <a href="{{route('loginpage')}}" class="text-white">Login </a>| <a href="{{route('registerpage')}}" class="text-white">Register</a>
+
+          </span>
+          @endrole
+        </div>
+
+					    {{-- <div class="col-md-5 pr-4 d-flex topper align-items-center text-lg-right">
 						    <span class="text"><a href="{{route('loginpage')}}" class="text-white">Login </a>| <a href="{{route('registerpage')}}" class="text-white">Register</a></span>
-					    </div>
+					    </div> --}}
 				    </div>
 			    </div>
 		    </div>

@@ -28,7 +28,7 @@
     				<tr>
     					<td>{{$i++}}</td>
     					<td>{{$crop->name}}</td>
-    					<td>{{$crop->photo}}</td>
+    					<td><img src="{{$crop->photo}}" width="100" height="100"></td>
     					<td>{{$crop->description}}</td>
     					<td>
     						<a href="{{route('crops.show',$crop->id)}}" class="btn btn-primary">Detail</a>

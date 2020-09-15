@@ -4,9 +4,15 @@ namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Order;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class OrderController extends Controller
 {
+     public function __construct($value='')
+    {
+      $this->middleware('role:Admin')->only('index','show');
+      $this->middleware('role:Customer')->only('store');
+    }
     /**
      * Display a listing of the resource.
      *
@@ -53,7 +59,7 @@ class OrderController extends Controller
        $order=new Order;
        $order->voucherno=uniqid();
        $order->orderdate=date('Y-m-d');
-       $order->user_id=1;
+       $order->user_id=Auth::id();
        
        $order->total=$total;
        $order->save();

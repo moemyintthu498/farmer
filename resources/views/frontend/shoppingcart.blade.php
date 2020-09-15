@@ -44,9 +44,19 @@
     				</div>
     				{{-- <p><a href="{{route('registerpage')}}" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p> --}}
 
-                     <button class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn buy_now"> 
+                     @role("Customer")
+                                <button class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn buy_now"> 
                                     Check Out 
                                 </button>
+                                @else
+                                <a href="{{route('loginpage')}}" class="btn btn-secondary btn-block mainfullbtncolor "> 
+                                    Login To Check Out 
+                                </a>
+                 @endrole
+
+                  {{-- <button class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn buy_now"> 
+                                    Check Out 
+                                </button> --}}
     			</div>
     		</div>
 			</div>
