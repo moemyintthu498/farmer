@@ -62,7 +62,7 @@
 			</div>
 		</section>
     <section class="my-5">
-      <div class="text-center h3 "><b>တောင်သူဦးကြီးများရှင့် ယနေ့ အောက်ပါသီးနှံများကို <a href="{{route('contactpage')}}">ပွဲရုံ</a> မှာလာရောက် ရောင်းချနိုင်ပါပီရှင့်</b></div>
+      <div class="text-center h3 "><b>တောင်သူဦးကြီးများရှင့် ယနေ့ အောက်ပါသီးနှံများကို&nbsp;&nbsp;<a href="{{route('contactpage')}}" class="h1 text-primary">&nbsp;&nbsp; ပွဲရုံ &nbsp;&nbsp;</a> &nbsp;&nbsp;မှာလာရောက် ရောင်းချနိုင်ပါပီရှင့်</b></div>
 
       <div class="container my-5">
         <div class="row my-5">

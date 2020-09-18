@@ -125,7 +125,7 @@
 	        </div>
 	      </div>
 
-	      <div class="slider-item" style="background-image: url({{asset('nn/images/potato1.jpg')}});">
+	      <div class="slider-item" style="background-image: url({{asset('nn/images/bg4.jpg')}});">
 	      	<div class="overlay"></div>
 	        <div class="container">
 	          <div class="row slider-text justify-content-center align-items-center" data-scrollax-parent="true">
@@ -143,6 +143,7 @@
     </section>
 
     @yield('front')
+
     <footer class="ftco-footer ftco-section my-4">
       <div class="container">
       	<div class="row">
@@ -189,7 +190,7 @@
 ?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">မကွေးမြို့နယ်/မြို့ပတ်လမ်း/တောင်သူဦးကြီး/span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">မကွေးမြို့နယ်/မြို့ပတ်လမ်း/တောင်သူဦးကြီး</span></li>
 	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">၀၉-၂၅၇၅၈၇၂၁၃ / ၀၉-၇၉၄၅၆၆၇၈၉</span></a></li>
 	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">farmer@gmail.com</span></a></li>
 	              </ul>
@@ -232,6 +233,9 @@
   <script src="{{asset('nn/js/google-map.js')}}"></script>
   <script src="{{asset('nn/js/main.js')}}"></script>
   <script src="{{asset('nn/js/localstorage_custom.js')}}"></script>
+   
+    @yield('script')
+  
     
   </body>
 </html>

@@ -46,7 +46,7 @@
     				{{-- <p><a href="{{route('registerpage')}}" class="btn btn-primary py-3 px-4">Proceed to Checkout</a></p> --}}
 
                      @role("Customer")
-                                <button class="btn btn-secondary btn-block mainfullbtncolor checkoutbtn buy_now"> 
+                                <button class="btn btn-primary btn-block mainfullbtncolor checkoutbtn buy_now"> 
                                     မှာလို့ရပါပီ
                                 </button>
                                 @else

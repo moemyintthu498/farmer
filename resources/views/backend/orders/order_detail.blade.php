@@ -1,13 +1,19 @@
 @extends('backendtemplate')
 @section('content')
 <div class="container">
-	<div class="d-sm-flex align-items-center justify-content-between">
-		<h1 class="h3 mb-0 text-gray-800 ">Voucherno:{{$order->voucherno}}</h1>
+	{{-- <div class="d-sm-flex align-items-center justify-content-between"> --}}
+
+    <h1 class="h3 mb-0 text-gray-800 "><b>Customer Name : </b>{{$order->user->name}}</h1>
+
+		<h1 class="h3 mb-0 text-gray-800 "><b>Voucherno : </b>{{$order->voucherno}}</h1>
 
 
 	    
-	</div>
-	<h1 class="h3 mb-0 text-gray-800 ">orderDate:{{$order->orderdate}}</h1>
+	{{-- </div> --}}
+	<h1 class="h3 mb-0 text-gray-800 "><b>OrderDate : </b>{{$order->orderdate}}</h1>
+
+  
+
 
 
 
@@ -17,6 +23,7 @@
           <thead>
             <tr>
               <th>No.</th>
+              
               <th>Crop Name</th>
              
               <th>Price</th>
@@ -39,6 +46,7 @@
             @endphp
 					<tr>
 						<td>{{$i++}}</td>
+
             <td>{{$storething->crop->name}}</td>
 					  <td>{{$mm}}MMK</td>
             <td>{{$storething->pivot->qty}}</td>

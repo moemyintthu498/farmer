@@ -31,9 +31,10 @@ class PageController extends Controller
     //dd($crops);
      $cps=Crop::find($id);
     //dd($cps);
-     $agrpesticide=Agrpesticide::all();
+     $agrpesticides=Agrpesticide::all();
+     //dd($agrpesticides);
 
-    return view('frontend.crop',compact('cps','agrpesticide'));
+    return view('frontend.crop',compact('cps','agrpesticides'));
   }
 
 
@@ -61,6 +62,18 @@ class PageController extends Controller
     {
        
         return view('frontend.userlogin');
+    }
+
+     public function showdatafun(Request $request)
+    {
+     // dd($request);
+      $id=$request->id;
+      //dd($id);
+       $agrpesticide=Agrpesticide::find($id);
+       //dd($agrpesticide->name);
+        //return view('frontend.crop',compact('agrpesticide'));
+       return $agrpesticide;
+        
     }
 
 }

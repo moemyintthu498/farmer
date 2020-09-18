@@ -35,6 +35,8 @@ Route::get('registerform','PageController@registerfun')->name('registerpage');
 
 Route::get('loginform','PageController@loginfun')->name('loginpage');
 
+Route::post('showdata','PageController@showdatafun')->name('showpage');
+
 
 // Backend Controller
 

@@ -207,6 +207,82 @@ $(document).ready(function(){
         
         
       })
+        //  $('.move').click(function(){
+        //     var id=$(this).data('id');
+        //     var disease=$(this).data('disease');
+        //     var photo=$(this).data('photo');
+
+        //     var item={id:id,photo:photo};
+
+        // var oldsay=localStorage.getItem('say');
+        // if(oldsay == null){
+        //     var say= new  Array();
+        // }else{
+        //     var say=JSON.parse(oldsay);
+
+        // }
+        // var exit;
+        // $.each(say,function (i,v) {
+        //     if(id==v.id){
+        //         v.qty++;
+        //         exit=true;
+        //     }
+        // })
+        // if(!exit){
+        //     say.push(item);
+        // }
+
+        // localStorage.setItem('say', JSON.stringify(say));
+        // showData();
+
+        //  })
+
+        //  function showData(){
+        // var mysay=localStorage.getItem('say');
+        // //console.log(myproduct);
+
+        // var  tbody=$('#thead');
+        // var cname=$('#tshow');
+       
+        
+        // var result='';
+        // var theader='';
+        
+
+        // //var footer='';
+        // if(mysay!=null){
+        //     say=JSON.parse(mysay);
+            
+           
+
+        //     $.each(say,function (i,v) {
+               
+                
+
+                
+        //         result+=`<tr><img src="${v.photo}" width='100' height='100'>
+        //                </tr>`;
+
+
+        //                 theader+= `<p>${v.disease}</p>`;
+                             
+                             
+
+                     
+
+        //              })
+            
+                 
+               
+        //        }
+
+        //        tbody.html(result);
+
+               
+        //        cname.html(theader);
+              
+             
+        // }
 })
 
 
