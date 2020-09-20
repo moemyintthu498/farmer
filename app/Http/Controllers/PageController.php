@@ -7,6 +7,8 @@ use App\Storething;
 use App\Pricelist;
 use App\Crop;
 use App\Agrpesticide;
+use App\Machine;
+
 
 class PageController extends Controller
 {
@@ -36,14 +38,24 @@ class PageController extends Controller
 
     return view('frontend.crop',compact('cps','agrpesticides'));
   }
+   public function machinefun($id)
+  {
+    
+    
+     $mach=Machine::find($id);
+   
+
+    return view('frontend.machine',compact('mach'));
+  }
 
 
      public function buyfun($value='')
 
   {
-   
+     $crop=Crop::all();
      $pricelists= Pricelist::all();
-    return view('frontend.buy',compact('pricelists'));
+
+    return view('frontend.buy',compact('pricelists','crop'));
   }
 
      public function contactfun($value='')

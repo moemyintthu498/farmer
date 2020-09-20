@@ -28,6 +28,8 @@ Route::get('/','PageController@home')->name('homepage');
 
 Route::get('shoppingcart','PageController@shoppingcart')->name('cartpage');
 Route::get('crop/{id}','PageController@cropfun')->name('croppage');
+
+Route::get('machine/{id}','PageController@machinefun')->name('machinepage');
 Route::get('buy','PageController@buyfun')->name('buypage');
 
 Route::get('contact','PageController@contactfun')->name('contactpage');
@@ -43,6 +45,8 @@ Route::post('showdata','PageController@showdatafun')->name('showpage');
 Route::resource('orders','OrderController');
 
 Route::middleware('role:Admin')->group(function(){
+	
+Route::resource('machines','MachineController');
    
 Route::resource('crops','CropController');
 

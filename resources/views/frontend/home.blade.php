@@ -4,8 +4,8 @@
 <div class="container-fluid my-5 text-center"><h2><b>ယနေ့ သီးနှံ ကာလပေါက်စျေးများ</b></h2>
 <h4>(သီးနှံစျေးကွက်မှာ အချိန်နဲ့အမျှ ပြောင်းလဲပါမည်)</h4></div>
 		<section class="ftco-section ftco-category ftco-no-pt my-5 ">
-			<div class="container ">
-				<div class="row">
+			<div class="container" style="margin-left: 130px">
+				<div class="row ml-5">
 					<div class="col-md-6">
               <h3><b>ဝယ်စျေး</b></h3>
               <b>----------</b>

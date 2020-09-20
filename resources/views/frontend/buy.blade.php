@@ -21,22 +21,12 @@
     					</a>
     					<div class="text py-3 pb-4 px-3 text-center">
     						<h3><a href="#">{{$pricelist->crop->name}}</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-                                    
-		    						<p class="price"><span>{{$pricelist->sellprice}}Ks</span></p>
-		    					</div>
-	    					</div>
+                            <p class="price"><span>{{$pricelist->sellprice}}Ks</span></p>
+                            <a href="#mform" class="buy-now d-flex justify-content-center align-items-center mx-1 "  >
+    						   <input type="submit" name="btn" value="ဝယ်ရန်" class="mm  btn-secondary text-white" data-id="{{$pricelist->id}}" data-cropid="{{$pricelist->crop->id}}" data-name="{{$pricelist->crop->name}}" data-price="{{$pricelist->sellprice}}">
+                            </a>
 
-    						<div class="bottom-area d-flex px-3">
-	    						<div class="m-auto d-flex">
-	    							
-	    							<a href="{{route('cartpage')}}" class="buy-now d-flex justify-content-center align-items-center mx-1"  >
-	    								<span><i class="ion-ios-cart mm" data-id="{{$pricelist->id}}" data-photo="{{$pricelist->crop->photo}}" data-name="{{$pricelist->crop->name}}" data-price="{{$pricelist->sellprice}}"></i></span>
-	    							</a>
-	    							
-    							</div>
-    						</div>
+    						
     					</div>
     				</div>
     			</div>
@@ -44,5 +34,61 @@
     			
     		</div>
     	</div>
+
+        <div class="container my-5 " >
+            <form id="mform" method="post" action="{{route('orders.store')}}">
+               @csrf
+            <h3 class="text-center my-5">လူကြီးမင်းတို့ သီနှံဝယ်ယူရန် Form ဖြည့်ပေးပါ</h3>
+
+            {{-- <div class="form-group col-md-6 my-5">
+                <label>Crop ID</label>
+                <input type="hidden" name="cropid" id="cropid" class="form-control" readonly="readonly">
+            </div>
+
+ --}}
+           <div style="margin-left: 250px">
+            <div class="form-group row my-5">
+                <label  class="col-sm-2 col-form-label "><b>သီနှံအမည်</b></label>
+                <div class="col-sm-6">
+                    <input type="text" name="name" id="name" class="form-control" readonly="readonly">
+                </div>
+            </div>
+            <div class="form-group row my-5">
+                <label class="col-sm-2 col-form-label my-3"><b>စျေးနှုန်း</b></label>
+                <div class="col-sm-6">
+                  <input type="number" name="price" id="price" class="form-control" readonly="readonly" >
+                </div>
+            </div>
+
+            <div class="form-group row my-5">
+                <label class="col-sm-2 col-form-label "><b>ပမာဏ</b></label>
+                <div class="col-sm-6">
+                    <input type="number" name="qty" class="form-control" id="qty">
+                 </div>
+            </div>
+            <div class="form-group row my-5">
+                <label class="col-sm-2 col-form-label "><b>ကုန်ကျငွေ စုစုပေါင်း</b></label>
+               <div class="col-sm-6">
+                <input type="number" name="total" id="total" class="form-control" placeholder="နှိပ်ပါ" readonly="readonly">
+              </div>
+            </div>
+           
+
+    
+
+       @role("Customer")
+                                <button class="btn btn-primary btn-block mainfullbtncolor checkoutbtn buy_now col-sm-4" style="margin-left: 270px"> 
+                                    မှာလို့ရပါပီ
+                                </button>
+                                @else
+                                <a href="{{route('loginpage')}}" class="btn btn-primary btn-block mainfullbtncolor col-sm-4 " style="margin-left: 270px"> 
+                                    Register(ဝယ်ယူရန်) 
+                                </a>
+         @endrole
+         </div>
+        </form>
+            
+        </div>
     </section>
     @endsection
+

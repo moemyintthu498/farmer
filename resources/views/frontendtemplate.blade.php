@@ -97,10 +97,18 @@
                 @endforeach 
               </div>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown04" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">စိုက်ပျိုးရေးသုံး စက်ပစ္စည်းများ</a>
+              <div class="dropdown-menu" aria-labelledby="dropdown04">
+                @foreach($machines as $machine) 
+                <a class="dropdown-item" href="{{route('machinepage',$machine->id)}}">{{$machine->name}}</a>
+                @endforeach 
+              </div>
+            </li>
 	          {{-- <li class="nav-item"><a href="{{route('sellpage')}}" class="nav-link">Selling</a></li> --}}
 	          <li class="nav-item"><a href="{{route('buypage')}}" class="nav-link">ဝယ်ယူရန်</a></li>
 	          <li class="nav-item"><a href="{{route('contactpage')}}" class="nav-link">ဆက်သွယ်ရန်</a></li>
-	          <li class="nav-item cta cta-colored"><a href="{{route('cartpage')}}" class="nav-link" ><span class="icon-shopping_cart"></span>[<span id="cartNoti" ></span>]</a></li>
+	          
 
 	        </ul>
 	      </div>
@@ -170,10 +178,11 @@
               <h2 class="ftco-heading-2">စာမျက်နှာ</h2>
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">ပင်မစာမျက်နှာ</a></li>
-                <li><a href="#" class="py-2 d-block">လေ့လာရန်</a></li>
+                <li><a href="#" class="py-2 d-block">သီးနှံများလေ့လာရန်</a></li>
+                <li><a href="#" class="py-2 d-block">စိုက်ပျိုးရေးသုံး စက်ပစ္စည်းများ</a></li>
                 <li><a href="#" class="py-2 d-block">ဝယ်ယူရန်</a></li>
                 <li><a href="#" class="py-2 d-block">ဆက်သွယ်ရန်</a></li>
-                <li><a href="#" class="py-2 d-block">စျေးခြင်းတောင်း</a></li>
+                
               </ul>
             </div>
           </div>

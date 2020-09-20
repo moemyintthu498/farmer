@@ -1,10 +1,10 @@
 @extends('frontendtemplate')
 @section('front')
 <div class="container my-5">
-	<h2 >{{$cps->name}}</h2>
+	<h2 ><b>{{$cps->name}}<b></h2>
 </div>
 <div class="my-5 container">
-	<table cellpadding="30px">
+	<table cellpadding="30px my-5">
 		<tbody>
 			<tr>
 				<td><img src="{{asset($cps->photo)}}" width="200" height="200"></td>
@@ -44,7 +44,7 @@
 	</table>
 
 	
-	<div id="datashow">
+	<div id="datashow" class="text-center">
 		
 
 
@@ -77,35 +77,24 @@
                   var html=`
 
                         <h3>${response.disease}</h3>
+                        <h3>-------------</h3>
+
+                          <h5><b><a href="">လူကြီးမင်းတို့ သုံးစွဲသင့်သော ဆေး</a></b></h5>
                          <img src="/${response.photo}" width="100" height="100">
     					  <div class="text py-3 pb-4 px-3 ">
-    						 <h3><a href="#">${response.name}</a></h3>
-    						<div class="d-flex">
-    							<div class="pricing">
-                                    
-		    				 		<p class="price"><span>${response.price}Ks</span></p>
-		    					</div>
-	    					</div>
-	    					 </div>
+    						 <h5>အမည် - ${response.name}</h5>
+    						  <h5>စျေးနှုန်း - 
+${response.price}ကျပ်</h5>
+    						
+	    				 </div>
 
 
                    	`;
 
 
                    	datashow.html(html);
-
-         
-
-
-                   
-
-                   
-                    
-                
-            })   
-				// let id=$(this).data('id');//data carrying
+                })   
 				
-				// console.log(id);
 				
 			})
 			
@@ -114,29 +103,4 @@
 @endsection
 
 
-          {{-- //var  datashow=$('#datashow');
-          //          var html='';
-
-          //          $.each(response,function (i,v) {
-
-          //          	var html+=`
-          //          	       <a href="#" class="img-prod"><img class="img-fluid" src="${v.photo}" alt="Colorlib Template">
-    						// <div class="overlay"></div>
-    					 //  </a>
-    					 //  <div class="text py-3 pb-4 px-3 text-center">
-    						// <h3><a href="#">${v.name}</a></h3>
-    						// <div class="d-flex">
-    						// 	<div class="pricing">
-                                    
-		    				// 		<p class="price"><span>${v.price}Ks</span></p>
-		    				// 	</div>
-	    					// </div>
-	    					// </div>
-
-
-          //          	`;
-
-
-          //          })
-                   //console.log(html);
-                   //$('#datashow').html(html); --}}
+        

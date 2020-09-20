@@ -72,6 +72,11 @@ f<!DOCTYPE html>
           <span>Crop</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{{route('machines.index')}}">
+          <i class="fas fa-fw fa-table"></i>
+          <span>Machine</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{route('agrpesticides.index')}}">
           <i class="fas fa-fw fa-table"></i>
           <span>Agricultural Pesticide</span></a>

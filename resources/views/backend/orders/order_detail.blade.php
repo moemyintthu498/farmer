@@ -12,12 +12,23 @@
 	{{-- </div> --}}
 	<h1 class="h3 mb-0 text-gray-800 "><b>OrderDate : </b>{{$order->orderdate}}</h1>
 
+
+  <h1 class="h3 mb-0 text-gray-800 "><b>price : </b>{{$order->total}}</h1>
+
+  {{-- <h1 class="h3 mb-0 text-gray-800 "><b>Qty : </b>{{$order->storethings->pivot->qty}}</h1> --}}
+
+
+ {{-- @foreach ($order->storethings as $storething)
+   <h1 class="h3 mb-0 text-gray-800 "><b>Crop Name : </b>{{$storething->crop->name}}</h1>
+@endforeach --}}
+
+
   
 
 
 
 
-<div class="row">
+{{-- <div class="row">
       <div class="col-md-10">
         <table class="table table-bordered">
           <thead>
@@ -37,6 +48,7 @@
 
             $i=1; $total=0;
            @endphp
+
            @foreach ($order->storethings as $storething)
            
            @php 
@@ -63,7 +75,7 @@
         </table>
       </div>
     </div>
-    </div>
+    </div> --}}
 
 
 @endsection

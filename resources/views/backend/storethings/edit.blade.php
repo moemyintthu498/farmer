@@ -23,7 +23,9 @@
 					<optgroup label="Choose Crop Name">
 						@foreach($crops as $crop)
 
-						<option value="{{ $crop->id }}">{{ $crop->name }}</option>
+						<option value="{{ $crop->id }}" @if($storething->crop_id==$crop->id)
+							{{'selected'}}
+							@endif>{{ $crop->name }}</option>
 						
 						@endforeach
 						

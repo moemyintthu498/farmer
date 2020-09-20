@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Carbon\Carbon;
 use App\Order;
+// use App\OrderDetail;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -50,23 +51,33 @@ class OrderController extends Controller
      */
     public function store(Request $request)
     {
-        $cartArr=json_decode($request->shop_data);
-       
-       $total=0;
-       foreach ($cartArr as $row) {
-           $total+=($row->price * $row->qty);
-       }
+        //dd($request);
+         $request->validate([
+        "name" => 'required',
+        "price" => 'required',
+        "qty" => 'required',
+        "total" => 'required',
+        
+    ]);
+
+      
        $order=new Order;
        $order->voucherno=uniqid();
        $order->orderdate=date('Y-m-d');
        $order->user_id=Auth::id();
-       
-       $order->total=$total;
+        
+       $order->total=$request->total;
        $order->save();
 
-       foreach ($cartArr as $row) {
-           $order->storethings()->attach($row->id,['qty'=>$row->qty]);
-       }
+      // echo $order['id'];
+       // $orderdetail=new OrderDetail;
+       // $orderdetail->order_id=$order['id'];
+       // $orderdetail->qty=$request->qty;
+       // //$orderdetail->storething_id=$order['id'];
+       //  $orderdetail->save();
+         // $order->storethings()->attach($order->id,['qty'=>$request->qty]);
+
+       
        return 'ဝယ်ယူမှု အောင်မြင်ပါသည်။';
     }
 

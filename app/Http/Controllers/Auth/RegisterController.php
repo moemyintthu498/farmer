@@ -89,7 +89,7 @@ class RegisterController extends Controller
                return 'btemplate';
             break;
             case 'Customer':
-               return 'shoppingcart';
+               return 'buy';
             break;
             default:
                 return '/';
